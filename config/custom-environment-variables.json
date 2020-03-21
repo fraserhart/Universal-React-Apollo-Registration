@@ -1,10 +1,10 @@
 {
-  "dbString": "db_connection_string",
-  "jwtPrivateKey": "jwt_secret_key",
+  "dbString": "mongodb+srv://prepper:prepper@cluster0-zidlo.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtPrivateKey": "876tyghjknbhgasldkj2asdfga2rwetryhjlo",
   "mailServer": {
-      "auth": {
-          "user": "mailServer_user",
-          "pass": "mailServer_pass"
-      }
+    "auth": {
+      "user": "mailServer_user",
+      "pass": "mailServer_pass"
+    }
   }
 }

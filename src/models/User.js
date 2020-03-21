@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
 const UserSchema = new Schema({
   firstName: {
@@ -22,7 +22,7 @@ const UserSchema = new Schema({
     required: true,
     unique: true
   },
-  userName: {
+  businessName: {
     type: String,
     required: true,
     unique: true
@@ -30,6 +30,21 @@ const UserSchema = new Schema({
   bio: {
     type: String
   },
+  street: {
+    type: String
+  },
+  townCity: {
+    type: String
+  },
+  postCode: {
+    type: String
+  },
+  userName: {
+    type: String,
+    required: true,
+    unique: true
+  },
+
   profileImage: {
     type: String
   },
@@ -37,11 +52,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   }
-
 });
 
-UserSchema.pre('save', function (next) {
-  if (!this.isModified('password')) {
+UserSchema.pre("save", function(next) {
+  if (!this.isModified("password")) {
     return next();
   }
   bcrypt.genSalt(10, (err, salt) => {
@@ -51,10 +65,9 @@ UserSchema.pre('save', function (next) {
       if (err) return next(err);
       this.password = hash;
 
-      next()
-    })
-  })
-})
+      next();
+    });
+  });
+});
 
-
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model("User", UserSchema);

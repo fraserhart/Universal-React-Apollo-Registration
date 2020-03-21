@@ -10,6 +10,10 @@ exports.typeDefs = `
         email: String!
         userName: String!
         joinDate: String
+        businessName: String
+        street: String
+        townCity: String
+        postCode: String
     }
 
     type Token {
@@ -34,7 +38,7 @@ exports.typeDefs = `
 
         signinUser(email: String!, password: String!): Token
 
-        editProfile(email: String!, bio: String!): User
+        editProfile(email: String!, bio: String!, businessName: String, street: String, townCity: String, postCode: String): User
 
         setProfileIMG(email: String!, profileImage: String!): User
         

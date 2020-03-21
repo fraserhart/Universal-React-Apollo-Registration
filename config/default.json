@@ -1,13 +1,13 @@
 {
-  "dbString": "",
-  "jwtPrivateKey": "",
+  "dbString": "mongodb+srv://prepper:prepper@cluster0-zidlo.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtPrivateKey": "876tyghjknbhgasldkj2asdfga2rwetryhjlo",
   "mailServer": {
-    "host": "-HOST-",
+    "host": "mail.google.com",
     "auth": {
-      "user": "",
-      "pass": ""
+      "user": "asdf",
+      "pass": "asdf"
     },
-    "from": "-FROM-EMAIL-",
+    "from": "asdfasdf@asdfasdf.com",
     "subject": "Password Reset"
   }
 }
